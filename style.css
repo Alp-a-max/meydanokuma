@@ -1,0 +1,143 @@
+:root {
+  color-scheme: dark;
+  font-family: "Courier New", Courier, monospace;
+  background: #070b0a;
+  color: #b8ffd8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 255, 128, 0.1), transparent 55%),
+    #070b0a;
+}
+
+.panel {
+  width: min(100%, 680px);
+  padding: clamp(22px, 5vw, 40px);
+  border: 1px solid #1b7549;
+  border-radius: 12px;
+  background: rgba(8, 18, 13, 0.96);
+  box-shadow: 0 0 32px rgba(0, 255, 128, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #68d99a;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  color: #e0ffed;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+}
+
+.description {
+  margin: 12px 0 28px;
+  color: #9ab9a6;
+  line-height: 1.5;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #b8ffd8;
+  font-size: 0.85rem;
+}
+
+.progress-track {
+  height: 18px;
+  overflow: hidden;
+  border: 1px solid #247a4d;
+  border-radius: 4px;
+  background: #101a14;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #00a85a, #66ff9c);
+  transition: width 0.2s linear;
+}
+
+.system-message {
+  margin: 20px 0 14px;
+  padding: 16px 12px;
+  border: 1px solid #287c50;
+  border-radius: 5px;
+  background: #0d2116;
+  color: #aaffc9;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.system-message.alarm {
+  border-color: #ff3347;
+  background: #d00018;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(255, 0, 32, 0.45);
+}
+
+button {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #3ce889;
+  border-radius: 5px;
+  background: #0b4c2b;
+  color: #eafff1;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #11663a;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.log-section {
+  margin-top: 28px;
+}
+
+.log-section h2 {
+  margin: 0 0 10px;
+  color: #68d99a;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.log-listesi {
+  min-height: 112px;
+  max-height: 190px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #1d4932;
+  border-radius: 5px;
+  background: #050907;
+  color: #91cfa8;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.log-listesi li::before {
+  content: "> ";
+  color: #42e987;
+}

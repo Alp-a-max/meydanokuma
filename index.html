@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b0a">
+  <title>Siber Güvenlik Simülasyonu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <p class="eyebrow">EĞİTİM AMAÇLI SİMÜLASYON</p>
+    <h1>SİSTEM GÜVENLİK TESTİ</h1>
+    <p class="description">Sahte terminal senaryosunu başlatın ve sistemin tepkisini izleyin.</p>
+
+    <section class="progress-section" aria-label="Simülasyon ilerlemesi">
+      <div class="progress-label">
+        <span>İLERLEME</span>
+        <span id="ilerlemeMetni">0%</span>
+      </div>
+      <div
+        id="ilerlemeCubugu"
+        class="progress-track"
+        role="progressbar"
+        aria-label="Simülasyon ilerlemesi"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <div id="ilerlemeDolumu" class="progress-fill"></div>
+      </div>
+    </section>
+
+    <div id="sistemMesaji" class="system-message" role="status" aria-live="assertive">
+      SİSTEM DİNLENİYOR
+    </div>
+
+    <button id="baslatButonu" type="button">SİMÜLASYONU BAŞLAT</button>
+
+    <section class="log-section" aria-labelledby="logBasligi">
+      <h2 id="logBasligi">SİSTEM LOGLARI</h2>
+      <ul id="logListesi" class="log-listesi" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="hacker.js"></script>
+</body>
+</html>
